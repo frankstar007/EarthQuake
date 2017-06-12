@@ -6,8 +6,9 @@
 </head>
 <body>
 <table>
+    ${earthQuake}
 
-    <#list earthQuakeList as earthQuake>
+   <#-- <#list earthQuakeList as earthQuake>
         <tr>
 
             <td>${earthQuake.earthId}</td>
@@ -22,7 +23,7 @@
         </tr>
 
 
-    </#list>
+    </#list>-->
 </table>
 
 </body>

@@ -1,5 +1,6 @@
 package com.frankstar.earthquake.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.frankstar.earthquake.entity.EarthQuake;
 import com.frankstar.earthquake.entity.NearCity;
 import com.frankstar.earthquake.service.EarthQuakeHistoryInfoService;
@@ -46,7 +47,9 @@ public class EarthQuakeController {
 
         List<EarthQuake> earthQuakeList = earthQuakeInfoService.getAllEarthQuakeInfo(pageNumber);
         ModelAndView mv = new ModelAndView("getAll");
-        mv.addObject("earthQuakeList", earthQuakeList);
+        //将List对象转换为JSON对象
+        String earthQuake = JSON.toJSONString(earthQuakeList);
+        mv.addObject("earthQuake", earthQuake);
 
         return mv;
     }

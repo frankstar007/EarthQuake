@@ -159,6 +159,12 @@
             <version>2.3.25-incubating</version>
         </dependency>
 
+        <!--JSON解析器-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
         <!--使用mybatis链接数据库-->
         <!--<dependency>-->
             <!--<groupId>org.mybatis</groupId>-->
